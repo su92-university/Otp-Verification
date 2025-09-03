@@ -1,6 +1,6 @@
 # OTP Authentication System
 
-![Project Banner](./images/project-banner.png)
+![Project Banner](./images/full_auth.jpg)
 <!-- Replace with your actual image path -->
 
 ## 📋 Description
