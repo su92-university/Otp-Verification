@@ -1,0 +1,327 @@
+.signsignup-container {
+  /* min-height: 100vh; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(  #5f3ece 50%,#c7c4c4 );
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+.signsignup-card {
+  background-color: #f4efef;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(125, 120, 120, 0.2);
+  transition: all 0.3s ease;
+} 
+
+.signsignup-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.signsignup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signsignup-header h2 {
+  color: #2d3748;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signsignup-header p {
+  color: #718096;
+  font-size: 14px;
+  margin: 0;
+}
+
+.signsignup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signform-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signform-group label {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.signform-group input {
+  padding: 14px 16px;
+  border: 2px solid #aeb1b1;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.signform-group input:focus {
+  outline: none;
+  border-color: #7c66ea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.signform-group input.error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.signform-group input::placeholder {
+  color: #a0aec0;
+}
+
+.signpassword-input-container {
+  position: relative;
+}
+
+.signpassword-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.signpassword-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.signerror-message {
+  color: #e53e3e;
+  font-size: 12px;
+  margin-left: 4px;
+  margin-top: 2px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.signsignup-btn {
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.signsignup-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.signsignup-btn:hover::before {
+  left: 100%;
+}
+
+.signsignup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.signsignup-btn:active {
+  transform: translateY(0);
+}
+
+.signsignup-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signsignup-btn.loading {
+  cursor: not-allowed;
+}
+
+.signspinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.signsignup-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.signsignup-footer p {
+  color: #718096;
+  font-size: 14px;
+  margin: 0;
+}
+
+.signsignin-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 4px;
+}
+
+.signsignin-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .signsignup-container {
+    padding: 16px;
+  }
+
+  .signsignup-card {
+    padding: 30px 24px;
+    border-radius: 16px;
+  }
+
+  .signsignup-header h2 {
+    font-size: 24px;
+  }
+
+  .signform-group input {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .signsignup-btn {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .signsignup-card {
+    padding: 24px 20px;
+  }
+
+  .signsignup-header h2 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .signsignup-card:hover {
+    transform: none;
+  }
+
+  .signsignup-btn:hover {
+    transform: none;
+  }
+}
+
+.signalert {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  /* border: 2px solid red; */
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.signalert-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #06b32f;
+}
+
+.signalert-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.signalert-icon {
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.signalert-content {
+  flex: 1;
+}
+
+.signalert-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.signalert-content .text-sm {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
